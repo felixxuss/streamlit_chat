@@ -12,8 +12,11 @@ PASSWORD = os.getenv("PASSWORD")
 if "authenticated" not in st.session_state:
     st.session_state.authenticated = False
 
-if "conversation" not in st.session_state:
-    st.session_state.conversation = []  # list of dicts with keys: role and content
+# Add system prompt once at the start of the conversation
+SYSTEM_PROMPT = "If you are asked to provide code or LaTeX, embed it in markdown text such that it is not compiled by the interface."
+
+if not st.session_state.conversation:
+    st.session_state.conversation.append({"role": "system", "content": SYSTEM_PROMPT})
 
 # Authentication: Ask for password if not yet authenticated
 if not st.session_state.authenticated:
