@@ -48,12 +48,8 @@ selected_model = st.sidebar.radio(
     ],
 )
 
-# Main chat interface
-st.title("Chat with ChatGPT")
-st.write("This conversation resets on page reload.")
-
 # Display the conversation history using st.chat_message
-for message in st.session_state.conversation:
+for message in st.session_state.conversation[1:]:
     if message["role"] == "user":
         with st.chat_message("user"):
             st.markdown(message["content"])
