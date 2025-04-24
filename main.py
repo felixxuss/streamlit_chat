@@ -8,6 +8,8 @@ from openai import OpenAI
 load_dotenv()
 PASSWORD = os.getenv("PASSWORD")
 
+st.set_page_config(initial_sidebar_state="collapsed")
+
 # Initialize session state for authentication and conversation
 if "authenticated" not in st.session_state:
     st.session_state.authenticated = False
