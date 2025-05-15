@@ -4,7 +4,7 @@ from google.genai import types
 from openai import OpenAI
 
 NAME_MAPPING = {
-    "Gemini-2.5-Pro": "gemini-2.5-pro-exp-03-25",  # gemini-2.5-pro-preview-03-25
+    "Gemini-2.5-Flash": "gemini-2.5-flash-preview-04-17",  # gemini-2.5-pro-preview-03-25
     "o4-mini": "o4-mini",
     "gpt-4o": "gpt-4o",
     "gpt-4o-mini-search-preview": "gpt-4o-mini-search-preview",

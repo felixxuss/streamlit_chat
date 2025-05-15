@@ -33,7 +33,7 @@ selected_model = st.sidebar.radio(
     "Select Model",
     options=[
         "o4-mini",
-        "Gemini-2.5-Pro",
+        "Gemini-2.5-Flash",
         "gpt-4o",
         "gpt-4o-mini-search-preview",
         "gpt-4o-search-preview",
